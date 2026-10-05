@@ -1,0 +1,174 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-color);
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Título Principal */
+h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 12px 0;
+}
+
+/* Esconde as linhas horizontais antigas */
+hr {
+  display: none;
+}
+
+/* Transforma cada seção/componente num Card elegante */
+#root > div > div,
+.app-header {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Títulos das Seções */
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--text-main);
+}
+
+/* Inputs e Selects globais */
+input, select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  border-radius: 10px;
+}
+
+/* Botões */
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Listas (Resumo do Prato) */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+li {
+  background-color: var(--bg-color);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Destaque do Custo Total */
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 8px 0 0 0;
+  text-align: right;
+}
+
+/* --- Estilos do Header --- */
+.app-header-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-header-info span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.app-header-info select {
+  flex: 1;
+}
+
+.btn-novo {
+  white-space: nowrap;
+}
+
+.restaurante-form-inline {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Estilos de tom cinza para o Placeholder do Select */
+.select-placeholder {
+  color: #9ca3af !important;
+}
+
+.option-placeholder {
+  color: #9ca3af;
+}
+
+.option-item {
+  color: var(--text-main);
+}
